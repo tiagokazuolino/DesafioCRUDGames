@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Desafio CRUD Games</string>
     <string name="splash_screen_image_logo">Splash Screen Image Logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_game_description">Create a new Game inside list</string>
 </resources>
