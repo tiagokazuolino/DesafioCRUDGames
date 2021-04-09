@@ -7,7 +7,7 @@ class GameRepository(private val dataSource: GameDataSource)  {
 
     suspend fun getGameById(id: Long) = dataSource.get(id)
 
-    suspend fun getGameList() = dataSource.getAll()
+    suspend fun getAllGames() = dataSource.getAll()
 
     suspend fun removeGame(game: Game) = dataSource.remove(game)
 }
