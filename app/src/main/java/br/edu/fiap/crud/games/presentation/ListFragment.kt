@@ -8,24 +8,24 @@ import android.view.ViewGroup
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import br.edu.fiap.crud.games.R
-import kotlinx.android.synthetic.main.fragment_list.*
+import br.edu.fiap.crud.games.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
-
+    private lateinit var binding: FragmentListBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentListBinding.inflate(layoutInflater)
         return inflater.inflate(R.layout.fragment_list, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        addGame.setOnClickListener { goToGameDetails() }
+        binding.addGame.setOnClickListener { goToGameDetails() }
     }
 
     private fun goToGameDetails(id: Long = 0L) {
         val action: NavDirections = ListFragmentDirections.actionGoToGame(id)
-        Navigation.findNavController(gamesListView).navigate(action)
+        Navigation.findNavController(binding.gamesListView).navigate(action)
     }
 }
