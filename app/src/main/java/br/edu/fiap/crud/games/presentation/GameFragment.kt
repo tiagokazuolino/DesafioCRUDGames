@@ -7,21 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import br.edu.fiap.crud.games.R
-import br.edu.fiap.crud.games.databinding.FragmentGameBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class GameFragment : Fragment() {
-    private lateinit var binding: FragmentGameBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentGameBinding.inflate(layoutInflater)
         return inflater.inflate(R.layout.fragment_game, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.checkButton.setOnClickListener { Navigation.findNavController(it).popBackStack() }
+        val checkButton =  view.findViewById<FloatingActionButton>(R.id.checkButton)
+        checkButton.setOnClickListener { Navigation.findNavController(it).popBackStack() }
     }
 }
