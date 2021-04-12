@@ -8,4 +8,8 @@
     <string name="producer">Producer</string>
     <string name="platform">Platform</string>
     <string name="notes">Note\'s</string>
+    <string name="producer">Producer</string>
+    <string name="name">Name</string>
+    <string name="last_update">Last update</string>
+    <string name="photo_of_game">Photo of Game</string>
 </resources>
