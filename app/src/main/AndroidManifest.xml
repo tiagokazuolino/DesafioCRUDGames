@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DesafioCRUDGames">
         <activity android:name=".presentation.MainActivity"></activity>
-        <activity android:name=".presentation.SplashScreenActivity">
+        <activity android:name=".presentation.SplashScreenActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
