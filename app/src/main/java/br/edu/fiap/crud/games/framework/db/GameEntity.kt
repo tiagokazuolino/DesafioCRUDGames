@@ -25,7 +25,8 @@ data class GameEntity(
             game.platform,
             game.note,
             game.createAt,
-            game.updateAt
+            game.updateAt,
+            game.id
         )
     }
 

@@ -13,10 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.edu.fiap.crud.games.databinding.FragmentListBinding
 import br.edu.fiap.crud.games.framework.ListViewModel
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(), ListAction {
     private var _binding: FragmentListBinding? = null
     private val binding get() = _binding!!
-    private val gamesListAdapter = GamesListAdapter(arrayListOf())
+    private val gamesListAdapter = GamesListAdapter(arrayListOf(), this)
     private lateinit var viewModel: ListViewModel
 
     override fun onCreateView(
@@ -56,6 +56,9 @@ class ListFragment : Fragment() {
         Navigation.findNavController(binding.gamesListView).navigate(action)
     }
 
+    override fun onClick(id: Long) {
+        goToGameDetails(id)
+    }
     override fun onResume() {
         super.onResume()
         viewModel.getGames()

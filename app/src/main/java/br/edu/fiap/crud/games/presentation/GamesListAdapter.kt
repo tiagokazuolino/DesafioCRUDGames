@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class GamesListAdapter(var games: ArrayList<Game>) :
+class GamesListAdapter(var games: ArrayList<Game>, val action: ListAction) :
     RecyclerView.Adapter<GamesListAdapter.GameViewHolder>() {
     private var _binding: ItemGameBinding? = null
 
@@ -45,6 +45,7 @@ class GamesListAdapter(var games: ArrayList<Game>) :
             val sdf = SimpleDateFormat("MMM dd, HH:mm")
             val resultDate = Date(game.updateAt)
             gameDate.text = "Last updated: ${sdf.format(resultDate)}"
+            layout.setOnClickListener { action.onClick(game.id) }
         }
     }
 }

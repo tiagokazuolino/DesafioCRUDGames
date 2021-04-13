@@ -12,4 +12,5 @@
     <string name="photo_of_game">Photo of Game</string>
     <string name="size_of_games_list">Size of Games list:</string>
     <string name="simple_description">Simple description</string>
+    <string name="delete_game">Delete Game</string>
 </resources>
