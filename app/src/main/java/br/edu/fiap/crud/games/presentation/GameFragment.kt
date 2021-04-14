@@ -111,14 +111,14 @@ class GameFragment : Fragment() {
             R.id.deleteMenu -> {
                 if (context != null && gameId != 0L) {
                     AlertDialog.Builder(requireContext())
-                        .setTitle("Delete Game")
-                        .setMessage("Are you sure what to delete this game?")
-                        .setPositiveButton("Yes") { _, _ ->
+                        .setTitle("Apagar o Jogo")
+                        .setMessage("Tem certeza do que deletar este jogo?")
+                        .setPositiveButton("Sim") { _, _ ->
                             viewModel.deleteGame(
                                 currentGame
                             )
                         }
-                        .setNegativeButton("No") { _, _ -> }
+                        .setNegativeButton("Não") { _, _ -> }
                         .create()
                         .show()
                 }
