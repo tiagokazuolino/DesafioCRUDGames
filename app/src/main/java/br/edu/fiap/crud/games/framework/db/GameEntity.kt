@@ -10,7 +10,7 @@ data class GameEntity(
     var name: String,
     var producer: String,
     var platform: String,
-    var nota: String,
+    var note: String,
     @ColumnInfo(name = "creation_date")
     var createAt: Long,
     @ColumnInfo(name = "update_time")
@@ -23,12 +23,12 @@ data class GameEntity(
             game.name,
             game.producer,
             game.platform,
-            game.nota,
+            game.note,
             game.createAt,
             game.updateAt,
             game.id
         )
     }
 
-    fun toGame() = Game(name, producer, platform, nota, createAt, updateAt, id)
+    fun toGame() = Game(name, producer, platform, note, createAt, updateAt, id)
 }

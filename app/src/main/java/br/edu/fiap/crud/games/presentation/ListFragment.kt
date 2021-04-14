@@ -47,7 +47,7 @@ class ListFragment : Fragment(), ListAction {
             binding.loadingView.visibility = View.GONE
             binding.gamesListView.visibility = View.VISIBLE
             gamesListAdapter.updateGames(gamesList.sortedBy { it.updateAt })
-            binding.gamesSizeView.text = "Quantidade de jogos: ${gamesList.size}"
+            binding.gamesSizeView.text = "Size of Games list: ${gamesList.size}"
         })
     }
 
