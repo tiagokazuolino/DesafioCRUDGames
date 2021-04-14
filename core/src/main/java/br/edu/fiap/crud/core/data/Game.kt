@@ -4,7 +4,7 @@ data class Game(
     var name: String,
     var producer: String,
     var platform: String,
-    var note: String,
+    var nota: String,
     var createAt: Long,
     var updateAt: Long,
     var id: Long = 0

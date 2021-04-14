@@ -7,42 +7,56 @@
     tools:context=".presentation.SplashScreenActivity"
     android:background="@color/white"
     >
+
     <ImageView
         android:id="@+id/imgSplashScreen"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/splash_screen_image_logo"
         android:src="@drawable/im_fiap_logo"
-        android:contentDescription="@string/splash_screen_image_logo" />
-    <TextView
-        android:id="@+id/txtSplashScreen"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:shadowColor="@color/design_default_color_primary"
-        android:shadowDx="1"
-        android:shadowDy="5"
-        android:shadowRadius="5"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgSplashScreen" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgControlGame"
         android:layout_width="108dp"
         android:layout_height="79dp"
+        android:contentDescription="@string/splash_screen_image_logo"
+        app:layout_constraintBottom_toTopOf="@+id/txtSplashScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_videogame_asset_24"
+        android:layout_margin="@dimen/standard_margin"/>
+
+    <TextView
+        android:id="@+id/txtSplashScreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/design_default_color_primary"
+        android:shadowDx="1"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/standard_margin"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSplashScreen"
-        app:srcCompat="@drawable/ic_baseline_videogame_asset_24"
-        android:contentDescription="TODO" />
+        android:layout_margin="@dimen/standard_margin"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

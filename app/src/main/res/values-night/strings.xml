@@ -8,10 +8,10 @@
     <string name="name">Nome</string>
     <string name="producer">Produtor</string>
     <string name="platform">Plataforma</string>
-    <string name="notes">Descrição(Opcional)</string>
+    <string name="notes">Nota</string>
     <string name="last_update">Última atualização</string>
     <string name="photo_of_game">Foto do jogo</string>
     <string name="size_of_games_list">Tamanho da lista de jogos:</string>
-    <string name="simple_description">Descrição simples</string>
+    <string name="simple_description">Nota do Jogo</string>
     <string name="delete_game">Apagar o Jogo</string>
 </resources>

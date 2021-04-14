@@ -41,7 +41,7 @@ class GamesListAdapter(var games: ArrayList<Game>, val action: ListAction) :
         fun bind(game: Game) {
             gameName.text = game.name
             gameProducer.text = game.producer
-            gameNotes.text = "${game.note}..."
+            gameNotes.text = "Nota: ${game.nota}"
             val sdf = SimpleDateFormat("MMM dd, HH:mm")
             val resultDate = Date(game.updateAt)
             gameDate.text = "Last updated: ${sdf.format(resultDate)}"

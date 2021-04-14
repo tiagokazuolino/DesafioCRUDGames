@@ -59,7 +59,7 @@ class GameFragment : Fragment() {
             ) {
                 val time: Long = System.currentTimeMillis()
                 currentGame.name = binding.etGameName.text.toString()
-                currentGame.note = binding.etGameNote.text.toString()
+                currentGame.nota = binding.etGameNote.text.toString()
                 currentGame.platform = binding.etGamePlatform.text.toString()
                 currentGame.producer = binding.etGameProducer.text.toString()
                 currentGame.updateAt = time
@@ -89,7 +89,7 @@ class GameFragment : Fragment() {
             note?.let {
                 currentGame = it
                 binding.etGameName.setText(it.name, TextView.BufferType.EDITABLE)
-                binding.etGameNote.setText(it.note, TextView.BufferType.EDITABLE)
+                binding.etGameNote.setText(it.nota, TextView.BufferType.EDITABLE)
                 binding.etGamePlatform.setText(it.platform, TextView.BufferType.EDITABLE)
                 binding.etGameProducer.setText(it.producer, TextView.BufferType.EDITABLE)
             }

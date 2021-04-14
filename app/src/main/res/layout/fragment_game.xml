@@ -5,6 +5,7 @@
     android:id="@+id/gameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".presentation.GameFragment">
 
     <ImageView
@@ -83,6 +84,8 @@
         app:tint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:focusable="true" />
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
